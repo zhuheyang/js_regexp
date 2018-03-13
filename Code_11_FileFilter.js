@@ -1,10 +1,10 @@
-// ¹ıÂËµôËùÓĞµÄ.cssÓë.jsÎÄ¼ş
-// ²»Ê¹ÓÃ·Ç²¶»ñÄ£Ê½, Æ¥Åä·Çjs·ÇcssÎÄ¼ş¿ÉÄÃµ½ÕıÈ·ÎÄ¼şÃû, µ«¶ÔjsÓëcssÎÄ¼şµÄÆ¥Åä»á·µ»Ø.js, .css
-// ÒòÎªÕıÏò»ò¸ºÏòÇ°Õ°(?=xxx), (?!xxx)¾ù»áÏûºÄ×Ö·û, ÔòÔÚ×öÓëÅĞ¶ÏÊ±»á½«'.js'Óë'.css'¸øÏûºÄÁË
-console.log(/(?!.+\.js$|.+\.css$).*/.exec("test.wow.html"));  // [ 'test.wow.html', index: 0, input: 'test.wow.html' ]
-console.log(/(?!.+\.js$).*/.exec("test.wow.js"));  // [ '.js', index: 8, input: 'test.wow.js' ]
-console.log(/(?!.+\.js$|.+\.css$).*/.exec("test.wow.css"));  // [ '.css', index: 8, input: 'test.wow.css' ]
+// è¿‡æ»¤æ‰æ‰€æœ‰çš„.cssä¸.jsæ–‡ä»¶
+// ä¸ä½¿ç”¨éæ•è·æ¨¡å¼, åŒ¹é…éjsécssæ–‡ä»¶å¯æ‹¿åˆ°æ­£ç¡®æ–‡ä»¶å, ä½†å¯¹jsä¸cssæ–‡ä»¶çš„åŒ¹é…ä¼šè¿”å›.js, .css
+// å› ä¸ºæ­£å‘æˆ–è´Ÿå‘å‰ç»(?=xxx), (?!xxx)å‡ä¼šæ¶ˆè€—å­—ç¬¦, åˆ™åœ¨åšä¸åˆ¤æ–­æ—¶ä¼šå°†'.js'ä¸'.css'ç»™æ¶ˆè€—äº†
+console.log(/(?!.+\.js$|.+\.css$).*/.exec('test.wow.html'))  // [ 'test.wow.html', index: 0, input: 'test.wow.html' ]
+console.log(/(?!.+\.js$).*/.exec('test.wow.js'))  // [ '.js', index: 8, input: 'test.wow.js' ]
+console.log(/(?!.+\.js$|.+\.css$).*/.exec('test.wow.css'))  // [ '.css', index: 8, input: 'test.wow.css' ]
 
-// Èç¹ûÆÚÍûµÃµ½¿Õ×Ö·û´®, Ó¦Ê¹ÓÃ·Ç²¶»ñÄ£Ê½ 
-console.log(/(?:(?!.+\.js$|.+\.css$).)*/.exec("test.wow.html"));  // [ 'test.wow.html', index: 0, input: 'test.wow.html' ]
-console.log(/(?:(?!.+\.js$|.+\.css$).)*/.exec("test.wow.js"));   // [ '', index: 0, input: 'test.wow.js' ]
+// å¦‚æœæœŸæœ›å¾—åˆ°ç©ºå­—ç¬¦ä¸², åº”ä½¿ç”¨éæ•è·æ¨¡å¼ 
+console.log(/(?:(?!.+\.js$|.+\.css$).)*/.exec('test.wow.html'))  // [ 'test.wow.html', index: 0, input: 'test.wow.html' ]
+console.log(/(?:(?!.+\.js$|.+\.css$).)*/.exec('test.wow.js'))   // [ '', index: 0, input: 'test.wow.js' ]

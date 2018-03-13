@@ -1,15 +1,15 @@
-// ½«ÕıÔò±í´ïÊ½²ğ·Ö³ÉĞ¡±í´ïÊ½, ·½±ãÁ¿´ÊµÄ×÷ÓÃ
-// /abc{2}/, Á¿´Ê½ö×÷ÓÃ×îºóµÄc
+// å°†æ­£åˆ™è¡¨è¾¾å¼æ‹†åˆ†æˆå°è¡¨è¾¾å¼, æ–¹ä¾¿é‡è¯çš„ä½œç”¨
+// /abc{2}/, é‡è¯ä»…ä½œç”¨æœ€åçš„c
 // /(abc){2}/
 const reg1 = /abc{2}/
 const reg2 = /(abc){2}/
 const str1 = 'abccabcabc'
-console.log(str1.replace(reg1, 'memeda'));
-console.log(str1.replace(reg2, 'memeda'));
+console.log(str1.replace(reg1, 'memeda'))
+console.log(str1.replace(reg2, 'memeda'))
 
 const reg = /^(\d{4})[/-](\d{2})[/-](\d{2})/
 const str = '2018-03-02'
-console.log(str.replace(reg, '$1Äê$3ÈÕ$2ÔÂ'));
+console.log(str.replace(reg, '$1å¹´$3æ—¥$2æœˆ'))
 
-// ·´ÏòÒıÓÃÖĞ, Èç¹û²»Ïë²¶»ñÄ³Ò»·Ö×é, ¿ÉÔÚÇ°ÃæÌí¼Ó '?:'¼´¿É
+// åå‘å¼•ç”¨ä¸­, å¦‚æœä¸æƒ³æ•è·æŸä¸€åˆ†ç»„, å¯åœ¨å‰é¢æ·»åŠ  '?:'å³å¯
 // Eg: /^(?:\d{4})[/-](\d{2})[-/](\d{2})/

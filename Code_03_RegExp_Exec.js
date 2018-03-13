@@ -1,30 +1,30 @@
-// Ö÷Òª·½·¨Îªexec(), ·µ»ØArrayÊµÀı, µ«¶àÁËindex ÒÔ¼° input Á½¸öÊôĞÔ
+// ä¸»è¦æ–¹æ³•ä¸ºexec(), è¿”å›Arrayå®ä¾‹, ä½†å¤šäº†index ä»¥åŠ input ä¸¤ä¸ªå±æ€§
 const memeda = 'hey, mom, dad, and the baby'
 const regExp = /mom,( dad,( and the ))/i
 
 let matches = regExp.exec(memeda)
-console.log(matches.input);
-console.log(matches.index);  // 5
-console.log(matches[0]);  //  'mom, dad, and the ' 
-console.log(matches[1]);  //  'dad, and the '
-console.log(matches[2]);  // ' and the '
+console.log(matches.input)
+console.log(matches.index)  // 5
+console.log(matches[0])  //  'mom, dad, and the ' 
+console.log(matches[1])  //  'dad, and the '
+console.log(matches[2])  // ' and the '
 
-// exec()·½·¨ÖĞÈ«¾ÖÄ£Ê½µÄÊ¹ÓÃ
-// ²»Ê¹ÓÃÈ«¾ÖÄ£Ê½, ½«Ê¹ÓÃÖ»·µ»ØµÚÒ»¸öÆ¥ÅäÏî, ÉèÖÃÈ«¾Ö±êÖ¾Ôò»áÃ¿´Î¼ÌĞø²éÕÒĞÂµÄÆ¥ÅäÏî, ´Ó¶ølastIndexÒ²ËæÖ®¸Ä±ä
+// exec()æ–¹æ³•ä¸­å…¨å±€æ¨¡å¼çš„ä½¿ç”¨
+// ä¸ä½¿ç”¨å…¨å±€æ¨¡å¼, å°†ä½¿ç”¨åªè¿”å›ç¬¬ä¸€ä¸ªåŒ¹é…é¡¹, è®¾ç½®å…¨å±€æ ‡å¿—åˆ™ä¼šæ¯æ¬¡ç»§ç»­æŸ¥æ‰¾æ–°çš„åŒ¹é…é¡¹, ä»è€ŒlastIndexä¹Ÿéšä¹‹æ”¹å˜
 const test = 'sat, bat, dat, mat'
 
 function testExec() {
   const pattern1 = /.at/
   let matches1 = pattern1.exec(test)
-  console.log(matches1);  // [ 'sat', index: 0, input: 'sat, bat, dat, mat' ]
-  console.log(matches1[1]);  // undefined
-  console.log(matches1.index);  // 0
-  console.log(pattern1.lastIndex);  // 0
+  console.log(matches1)  // [ 'sat', index: 0, input: 'sat, bat, dat, mat' ]
+  console.log(matches1[1])  // undefined
+  console.log(matches1.index)  // 0
+  console.log(pattern1.lastIndex)  // 0
 
   matches1 = pattern1.exec(test)
-  console.log(matches1);  // same as above
-  console.log(matches1.index);
-  console.log(pattern1.lastIndex);
+  console.log(matches1)  // same as above
+  console.log(matches1.index)
+  console.log(pattern1.lastIndex)
 }
 
 // testExec()
@@ -32,14 +32,14 @@ function testExec() {
 function testExec2() {
   const pattern2 = /.at/g
   let matches2 = pattern2.exec(test)
-  console.log(matches2);  // [ 'sat', index: 0, input: 'sat, bat, dat, mat' ]
-  console.log(matches2.index);  // 0
-  console.log(pattern2.lastIndex);  // 3
+  console.log(matches2)  // [ 'sat', index: 0, input: 'sat, bat, dat, mat' ]
+  console.log(matches2.index)  // 0
+  console.log(pattern2.lastIndex)  // 3
 
   matches2 = pattern2.exec(test)
-  console.log(matches2);  // [ 'bat', index: 5, input: 'sat, bat, dat, mat' ]
-  console.log(matches2.index);  // 5
-  console.log(pattern2.lastIndex);  // 8
+  console.log(matches2)  // [ 'bat', index: 5, input: 'sat, bat, dat, mat' ]
+  console.log(matches2.index)  // 5
+  console.log(pattern2.lastIndex)  // 8
 }
 
 testExec2()

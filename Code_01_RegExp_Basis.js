@@ -1,27 +1,27 @@
-// ×ÖÃæÁ¿Ä£Ê½ÒÔ¼°¹¹Ôìº¯ÊıµÄ×Ö·û´®Ä£Ê½
+// å­—é¢é‡æ¨¡å¼ä»¥åŠæ„é€ å‡½æ•°çš„å­—ç¬¦ä¸²æ¨¡å¼
 // var regularExpression = / pattern / flags;
-// 3 ÖÖflag: g, i, m
+// 3 ç§flag: g, i, m
 
-const pattern1 = /[bc]at/i  // Æ¥Åä bat or cat, ²»Çø·Ö´óĞ¡Ğ´.
-const pattern2 = /\[bc\]at/i // Æ¥Åä[bc]at, ²»Çø·Ö´óĞ¡Ğ´
-const pattern3 = /.at/i  // Æ¥ÅäËùÓĞÒÔ'at'½áÎ²µÄÈı¸ö×Ö·ûµÄ×éºÏ. '.'´ú±íÈÎÒâ×Ö·û
-const pattern4 = /\.at/i  // Æ¥ÅäËùÓĞ'.at', ²»Çø·Ö´óĞ¡Ğ´.
+const pattern1 = /[bc]at/i  // åŒ¹é… bat or cat, ä¸åŒºåˆ†å¤§å°å†™.
+const pattern2 = /\[bc\]at/i // åŒ¹é…[bc]at, ä¸åŒºåˆ†å¤§å°å†™
+const pattern3 = /.at/i  // åŒ¹é…æ‰€æœ‰ä»¥'at'ç»“å°¾çš„ä¸‰ä¸ªå­—ç¬¦çš„ç»„åˆ. '.'ä»£è¡¨ä»»æ„å­—ç¬¦
+const pattern4 = /\.at/i  // åŒ¹é…æ‰€æœ‰'.at', ä¸åŒºåˆ†å¤§å°å†™.
 
 const pattern11 = new RegExp('[bc]at', 'i')
 const pattern12 = new RegExp('\\[bc\\]at', 'i')
 const pattern13 = new RegExp('.at', 'i')
 const pattern14 = new RegExp('\\.at', 'i')
 
-// ËùÓĞÔª×Ö·ûÔÚ×Ö·û´®ÖĞ¶¼±ØĞëË«ÖØ×ªÒÆ, ¼´±ãÒÑ¾­×ªÒÆ¹ıµÄ×Ö·ûÒ²Í¬Ñù
-// \nÔÚ×Ö·û´®ÖĞÎª\\n, ÔòÔÚÕıÔò±í´ïÊ½×Ö·û´®ÖĞÎª: '\\\\n'
+// æ‰€æœ‰å…ƒå­—ç¬¦åœ¨å­—ç¬¦ä¸²ä¸­éƒ½å¿…é¡»åŒé‡è½¬ç§», å³ä¾¿å·²ç»è½¬ç§»è¿‡çš„å­—ç¬¦ä¹ŸåŒæ ·
+// \nåœ¨å­—ç¬¦ä¸²ä¸­ä¸º\\n, åˆ™åœ¨æ­£åˆ™è¡¨è¾¾å¼å­—ç¬¦ä¸²ä¸­ä¸º: '\\\\n'
 
 let str1 = 'baetsdcatbat wesdwe'
 console.log(pattern1.test(str1))
 let str2 = '[bc]at'
-console.log(pattern2.test(str2));
+console.log(pattern2.test(str2))
 
-// es3ÖĞ, Ê¹ÓÃ×ÖÃæÁ¿ĞÎÊ½Ê¼ÖÕ¹²ÏíÒ»¸öRegExpÊµÀı, ¶øÊ¹ÓÃ¹¹Ôìº¯Êı´´½¨µÄRegExpÊµÀıÃ¿´Î¶¼ÊÇÒ»¸öĞÂÊµÀı
-// ÔÚes5ÖĞÒÑ¸üÕı, Ê¹ÓÃ×ÖÃæÁ¿ĞÎÊ½ÓëRegExp¹¹Ôìº¯ÊıÒ»Ñù, Ã¿´Î¶¼´´½¨ĞÂµÄÊµÀı
+// es3ä¸­, ä½¿ç”¨å­—é¢é‡å½¢å¼å§‹ç»ˆå…±äº«ä¸€ä¸ªRegExpå®ä¾‹, è€Œä½¿ç”¨æ„é€ å‡½æ•°åˆ›å»ºçš„RegExpå®ä¾‹æ¯æ¬¡éƒ½æ˜¯ä¸€ä¸ªæ–°å®ä¾‹
+// åœ¨es5ä¸­å·²æ›´æ­£, ä½¿ç”¨å­—é¢é‡å½¢å¼ä¸RegExpæ„é€ å‡½æ•°ä¸€æ ·, æ¯æ¬¡éƒ½åˆ›å»ºæ–°çš„å®ä¾‹
 function testExample() {
   let re = null
   let i = 0
@@ -40,7 +40,7 @@ function testExample2() {
   let i = 0
   while (i < 10) {
     re = new RegExp('cat', 'g')
-    console.log(re.test('catastrophe'));
+    console.log(re.test('catastrophe'))
     i++
   }
 }

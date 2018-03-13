@@ -1,16 +1,16 @@
 const str = '\n\t   \r\f mememda  \r\t\n  '
-console.log(str);
-console.log(str.trim());  // memeda  in ES5
+console.log(str)
+console.log(str.trim())  // memeda  in ES5
 
 // 1. use RegExp:
-// 但此方法由于正则表达式的分支功能, 在处理长字符串时会有性能问题
+// 浣嗘鏂规硶鐢变簬姝ｅ垯琛ㄨ揪寮忕殑鍒嗘敮鍔熻兘, 鍦ㄥ鐞嗛暱瀛楃涓叉椂浼氭湁鎬ц兘闂
 if (String.prototype.trim) {
   String.prototype.trim1 = function () {
-    // 这里不要忘了添加全局搜索flag, 否则只会处理左边的空白字符了
+    // 杩欓噷涓嶈蹇樹簡娣诲姞鍏ㄥ眬鎼滅储flag, 鍚﹀垯鍙細澶勭悊宸﹁竟鐨勭┖鐧藉瓧绗︿簡
     return this.replace(/^\s+|\s+$/g, '')
   }
 }
-console.log(str.trim1());  // memeda
+console.log(str.trim1())  // memeda
 
 // 2. use RegExp twice, improve performance
 if (String.prototype.trim) {
@@ -18,7 +18,7 @@ if (String.prototype.trim) {
     return this.replace(/^\s+/, '').replace(/\s+$/, '')
   }
 }
-console.log(str.trim2());  // memeda
+console.log(str.trim2())  // memeda
 
 // 3. use RegExp & String.prototype.slice 
 if (String.prototype.trim) {
@@ -30,4 +30,4 @@ if (String.prototype.trim) {
     return str.slice(0, end + 1)  // slice(indexStart [, indexEnd]) => [indexStart, indexEnd)
   }
 }
-console.log(str.trim3());  // memeda
+console.log(str.trim3())  // memeda

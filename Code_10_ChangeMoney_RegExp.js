@@ -3,22 +3,22 @@ const str = '1234567'
 const str2 = '123456789'
 const reg1 = /(\d)(?=(?:\d{3})+$)/g
 const reg2 = /(\d)(?=(\d{3})+$)/g
-// Ê¹ÓÃÇ°Õ°, ÕÒµ½¾àÀë¾ä×ÓÄ©Î²µÄ¾àÀëÎªx¸ö\d{3}µÄÊı×Ö, ½«ÆäÌæ»»Îª'¸ÃÊı×Ö + ,'
-// ?= ÎªÕıÏòÇ°Õ°, ?!Îª¸ºÏòÇ°Õ°, ¶ø?:±íÊ¾²»²¶»ñ¸Ã·Ö×é 
-console.log(str.replace(reg1, '$1,'));  // 1,234,567
-console.log(str.replace(reg2, '$1,'));  // 1,234,567
+// ä½¿ç”¨å‰ç», æ‰¾åˆ°è·ç¦»å¥å­æœ«å°¾çš„è·ç¦»ä¸ºxä¸ª\d{3}çš„æ•°å­—, å°†å…¶æ›¿æ¢ä¸º'è¯¥æ•°å­— + ,'
+// ?= ä¸ºæ­£å‘å‰ç», ?!ä¸ºè´Ÿå‘å‰ç», è€Œ?:è¡¨ç¤ºä¸æ•è·è¯¥åˆ†ç»„ 
+console.log(str.replace(reg1, '$1,'))  // 1,234,567
+console.log(str.replace(reg2, '$1,'))  // 1,234,567
 
-// execÃ¿´ÎÖ»Ñ°ÕÒÒ»¸ö, µ«ÉèÖÃÈ«¾ÖÄ£Ê½ºó, ÏÂ´ÎÑ°ÕÒ»á´ÓÉÏ´ÎµÄlastIndex³ö·¢
+// execæ¯æ¬¡åªå¯»æ‰¾ä¸€ä¸ª, ä½†è®¾ç½®å…¨å±€æ¨¡å¼å, ä¸‹æ¬¡å¯»æ‰¾ä¼šä»ä¸Šæ¬¡çš„lastIndexå‡ºå‘
 let matches1 = reg1.exec(str)
 let matches2 = reg2.exec(str)
-console.log(matches1);  // [ '1', '1', index: 0, input: '1234567' ]
-console.log(matches2);  // [ '1', '1', '567', index: 0, input: '1234567' ]
+console.log(matches1)  // [ '1', '1', index: 0, input: '1234567' ]
+console.log(matches2)  // [ '1', '1', '567', index: 0, input: '1234567' ]
 let matches3 = reg1.exec(str2)
 let matches4 = reg2.exec(str2)
-console.log(matches3, reg1.lastIndex);  // [ '3', '3', index: 2, input: '123456789' ], 3
-console.log(reg1.exec(str2), reg1.lastIndex);  // [ '6', '6', index: 5, input: '123456789' ], 6
-console.log(matches4, reg2.lastIndex);  // [ '3', '3', '789', index: 2, input: '123456789' ], 3
-console.log(reg2.exec(str2), reg2.lastIndex); // [ '6', '6', '789', index: 5, input: '123456789' ], 6
+console.log(matches3, reg1.lastIndex)  // [ '3', '3', index: 2, input: '123456789' ], 3
+console.log(reg1.exec(str2), reg1.lastIndex)  // [ '6', '6', index: 5, input: '123456789' ], 6
+console.log(matches4, reg2.lastIndex)  // [ '3', '3', '789', index: 2, input: '123456789' ], 3
+console.log(reg2.exec(str2), reg2.lastIndex) // [ '6', '6', '789', index: 5, input: '123456789' ], 6
 
 // use match to change the number
 // change 1000000 to 1,000,000.00
@@ -44,4 +44,4 @@ const dealNumber = function(money) {
 console.log(dealNumber(1000000.2))  // 1,000,000.20
 console.log(dealNumber(1000000.25))  // 1,000,000.25
 console.log(dealNumber(-5235.23))  //-5,235.23
-console.log(dealNumber(0));
+console.log(dealNumber(0))

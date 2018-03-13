@@ -1,6 +1,6 @@
-// substr(index [, length]), Èç¹ûlengthÎª 0 »ò¸ºÖµ, ·µ»Ø¿Õ×Ö·û´®, 
-// index Îª¸ºÖµÇÒ abs(index) ´óÓÚ strµÄ³¤¶È, Ôòindex ´Ó0¿ªÊ¼, 
-// index ÎªÕıÖµÇÒ´óÓÚstr³¤¶È, Ôò·µ»Ø¿Õ×Ö·û´®
+// substr(index [, length]), å¦‚æœlengthä¸º 0 æˆ–è´Ÿå€¼, è¿”å›ç©ºå­—ç¬¦ä¸², 
+// index ä¸ºè´Ÿå€¼ä¸” abs(index) å¤§äº strçš„é•¿åº¦, åˆ™index ä»0å¼€å§‹, 
+// index ä¸ºæ­£å€¼ä¸”å¤§äºstré•¿åº¦, åˆ™è¿”å›ç©ºå­—ç¬¦ä¸²
 let str = 'abcdefghij' 
 console.log(str.substr(1,2));  // 'bc'
 console.log(str.substr(-3, 2));   // 'hi'
@@ -10,13 +10,13 @@ console.log(str.substr(-20, 2));  // 'ab'
 console.log(str.substr(20, 2));  // ''
 
 // substring(indexStart [, indexEnd])
-// Êä³ö[indexStart, indexEnd)Ö®¼äµÄ×Ö·û´®, ')'±íÊ¾²»°üÀ¨indexEnd´¦µÄ×Ö·û´®
+// è¾“å‡º[indexStart, indexEnd)ä¹‹é—´çš„å­—ç¬¦ä¸², ')'è¡¨ç¤ºä¸åŒ…æ‹¬indexEndå¤„çš„å­—ç¬¦ä¸²
 let str1 = 'Mozilla'
 console.log(str1.substring(0, 3));  // Moz
-console.log(str1.substring(3, 0)); // Moz  if indexStart > indexEnd, ÔòÖ´ĞĞ½á¹ûÓëµ÷»»indexStartÒÔ¼°indexEndÏàÍ¬
-// if index < 0 »òÎªNaN, ÔòÏàµ±ÓÚ0
+console.log(str1.substring(3, 0)); // Moz  if indexStart > indexEnd, åˆ™æ‰§è¡Œç»“æœä¸è°ƒæ¢indexStartä»¥åŠindexEndç›¸åŒ
+// if index < 0 æˆ–ä¸ºNaN, åˆ™ç›¸å½“äº0
 console.log(str1.substring(-3, 3));  // equals to substring(0, 3) or (3, NaN), (NaN, 3)....
-// Í¬Ñù, Ê¡ÂÔµÚ¶ş¸ö²ÎÊıindexEnd, »áÖ±½ÓÌáÈ¡×Ö·û´®µ½½áÎ²
+// åŒæ ·, çœç•¥ç¬¬äºŒä¸ªå‚æ•°indexEnd, ä¼šç›´æ¥æå–å­—ç¬¦ä¸²åˆ°ç»“å°¾
 console.log(str1.substring(0));  // Mozill
 
 '

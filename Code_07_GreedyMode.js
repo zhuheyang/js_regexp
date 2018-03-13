@@ -1,7 +1,7 @@
-// ÕıÔò±í´ïÊ½Ä¬ÈÏÆ¥ÅäÌ°À·Ä£Ê½, Ò²¼´¾¡¿ÉÄÜµØ¶àÆ¥Åä
-// ÀÁ¶èÄ£Ê½¾ÍÊÇ¾¡¿ÉÄÜÆ¥ÅäÉÙµÄÇé¿ö, ÔÚÁ¿´Êºó¼Ó?ºÅ¼´¿É
+// æ­£åˆ™è¡¨è¾¾å¼é»˜è®¤åŒ¹é…è´ªå©ªæ¨¡å¼, ä¹Ÿå³å°½å¯èƒ½åœ°å¤šåŒ¹é…
+// æ‡’æƒ°æ¨¡å¼å°±æ˜¯å°½å¯èƒ½åŒ¹é…å°‘çš„æƒ…å†µ, åœ¨é‡è¯ååŠ ?å·å³å¯
 const reg1 = /\d{3,6}?/
 const reg2 = /\d{3,6}/
 const str = '1234567890'
-console.log(str.replace(reg1, 'memeda'));  // memeda4567890
-console.log(str.replace(reg2, 'memeda'));  // memeda7890
+console.log(str.replace(reg1, 'memeda'))  // memeda4567890
+console.log(str.replace(reg2, 'memeda'))  // memeda7890
